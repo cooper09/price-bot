@@ -65,22 +65,22 @@ async function monitorPrice() {
 
     // ADD YOUR CUSTOM TOKEN PAIRS HERE!!!
 
-    await checkPair({
+/*    await checkPair({
       inputTokenSymbol: 'ETH',
       inputTokenAddress: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
       outputTokenSymbol: 'MKR',
       outputTokenAddress: '0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2',
       inputAmount: web3.utils.toWei('1', 'ETHER')
     })
-
+*/
     await checkPair({
       inputTokenSymbol: 'ETH',
       inputTokenAddress: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
       outputTokenSymbol: 'DAI',
-      outputTokenAddress: '0x6b175474e89094c44da98b954eedeac495271d0f',
+      outputTokenAddress: '0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359',//'0x6b175474e89094c44da98b954eedeac495271d0f',
       inputAmount: web3.utils.toWei('1', 'ETHER')
     })
-
+/*
     await checkPair({
       inputTokenSymbol: 'ETH',
       inputTokenAddress: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
@@ -96,9 +96,9 @@ async function monitorPrice() {
       outputTokenAddress: '0x514910771af9ca656af840dff83e8264ecf986ca',
       inputAmount: web3.utils.toWei('1', 'ETHER')
     })
-
+*/
   } catch (error) {
-    console.error(error)
+    console.error("Checkorice returns: ", error)
     monitoringPrice = false
     clearInterval(priceMonitor)
     return
